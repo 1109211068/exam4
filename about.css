@@ -132,6 +132,7 @@
         }
 
         .section-with-bg h3 {
+            font-family: 'cat';
             font-size: 1.5em;
             margin-bottom: 10px;
         }
