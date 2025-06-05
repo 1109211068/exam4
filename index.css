@@ -6,7 +6,7 @@
 
         @font-face {
         font-family: 'cat'; /* 給這個字體一個你喜歡的名稱 */
-        src: url('exam4/fonts/MaokenAssortedSans-TC.otf') format('truetype'); /* 字體檔案的路徑和格式 */
+        src: url('/exam4/fonts/MaokenAssortedSans-TC.otf') format('truetype'); /* 字體檔案的路徑和格式 */
         font-weight: normal; /* 定義這個字體的字重 */
         font-style: normal; /* 定義這個字體的樣式 */
     }
