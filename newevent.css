@@ -1,0 +1,244 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Noto Sans TC", sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Hero Section (首頁大圖區) */
+        .hero {
+            position: relative;
+            width: 100%;
+            min-height: calc(100vw * 0.558854166);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #fefefe;
+    z-index: 0;
+}
+
+        /* 導覽列 */
+        nav {
+        position: fixed;
+        margin-top: 30px;
+        /* margin-right: 200px; */
+        top: 30px;
+        right: 40px;
+        display: flex;
+        gap: 60px;
+        /* background: rgba(255, 255, 255, 0.8); */
+        padding: 10px 20px;
+        border-radius: 20px;
+        z-index: 12;
+        }
+        nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 1.6rem;
+        }
+        nav a:hover {
+            color: #007BFF;
+        }
+
+        .hero-content-overlay {
+            font-size: 2.5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            color: rgb(0, 0, 0);
+        }
+
+
+
+.activity-section {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vw * 1.35);
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px;
+    box-sizing: border-box;
+    color: #333;
+    padding-top: 400px;
+
+ 
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat; 
+}
+
+
+
+
+
+
+
+/* --- Footer Styles --- */
+.main-footer {
+    background-color: #333; 
+    color: #f4f4f4; /*
+    padding: 60px 20px 20px; /* 上下內距，底部內距小一些給版權資訊 */
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.main-footer .footer-content {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding-bottom: 30px; 
+}
+
+.main-footer .footer-section {
+    flex: 1; 
+    min-width: 250px; 
+    margin: 20px; 
+}
+
+.main-footer .footer-section h3 {
+    color: #FFD700; 
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.main-footer .footer-section p,
+.main-footer .footer-section ul {
+    text-align: left;
+}
+
+.main-footer .footer-section ul {
+    list-style: none; 
+    padding: 0;
+}
+
+.main-footer .footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.main-footer .footer-section ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-footer .footer-section ul li a:hover {
+    color: #007BFF; 
+}
+
+.main-footer .footer-section.contact p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.main-footer .footer-section.contact i {
+    margin-right: 10px;
+    color: #FFD700; 
+}
+
+.main-footer .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    color: #aaa; 
+    font-size: 0.9rem;
+}
+
+
+
+.hero .navbg{
+    position: fixed;
+    right: 0;
+    top: 40px;
+    z-index: 11;
+}
+
+.hero .logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 13;
+}
+
+.activity-grid-container { 
+    
+    margin: 0 auto;
+    /* background-color: #fa0; */
+    width: 1000px;
+    display: flex;
+    gap: 40px;
+    margin-top: 60px;
+    margin-bottom: 60px; 
+    align-items: center;
+    
+
+}
+
+.activity-grid-container .pic   {
+    width: 400px;
+    height: 300px;
+}
+
+.activity-grid-container .pic  img {
+    width: 400px;
+    height: 300px;
+}
+
+.activity-grid-container .txt p{ 
+    font-size: 1rem;
+}
+
+.activity-section .boxbd{
+    width: 1200px;
+    background-color: #E9DFA5;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: -450px;
+}
+
+
+    .activity-section hr{
+       border: none;
+    border-top: 3px solid #5C3846;
+    width: 80%;
+    margin: 40px auto;
+    }
+
+    .details-link {
+  color: #eaa02a;
+  text-decoration: none; 
+  font-weight: bold;
+}
+
+.hero .navbg img{
+        width: 800px;
+        height: 100px;
+    }
+
+    .hero .logo img{
+        width: 200px;
+        height: 200px;
+    }
+

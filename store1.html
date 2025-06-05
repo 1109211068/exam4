@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="store1.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <div class="logo">
+         <a href="index.html"><img src="img/mainlogo.png" alt=""></a>
+    </div>
+        <img class="hero-bg" src="img/page5.png" alt="動物背景" />
+        <nav>
+
+            <a href="about.html">動物旅便帖</a>
+    <a href="newevent.html">季節活動</a>
+    <a href="store.html">動物伴手禮</a>
+    <a href="contant.html">關於本站</a>
+        </nav>
+
+        <div class="hero-content-overlay">
+            <h2 class="overlay-title">便帖商店</h2>
+            <div class="separator-line"></div>
+            
+            <div class="hero-pic-slider-container">
+                <div class="hero-pic-slider">
+                    <img class="slide-item" src="img/shop03.png" alt="便帖商店圖片1">
+                    <img class="slide-item" src="img/shop05.png" alt="便帖商店圖片2">
+                    <img class="slide-item" src="img/shop06.png" alt="便帖商店圖片3">
+                    <img class="slide-item" src="img/shop07.png" alt="便帖商店圖片4">
+                </div>
+                <button class="slider-button prev" aria-label="上一張圖片">&#10094;</button>
+                <button class="slider-button next" aria-label="下一張圖片">&#10095;</button>
+                <div class="image-slider-container">
+                <div class="image-slider">
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                </div>
+            </div>
+            </div>
+
+            
+        </div>
+
+        <div class="navbg">
+        <img src="img/navbg.png" alt="">
+    </div>
+    </header>
+
+   
+
+    <script>
+
+        const slider = document.querySelector('.image-slider');
+        let counter = 0;
+        const slideWidth = document.querySelector('.image-slider-container').offsetWidth;
+
+        function slideNext() {
+            counter++;
+            if (counter >= slider.children.length) {
+                counter = 0;
+            }
+            slider.style.transform = `translateX(-${slideWidth * counter}px)`;
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            setInterval(slideNext, 6000); 
+        });
+        const heroPicSlider = document.querySelector('.hero-pic-slider');
+        const prevButton = document.querySelector('.hero-pic-slider-container .prev');
+        const nextButton = document.querySelector('.hero-pic-slider-container .next');
+        let heroPicCounter = 0;
+        let heroPicSlideWidth;
+        let totalHeroPicSlides;
+
+        function updateHeroPicSlider() {
+            if (heroPicSlider && heroPicSlideWidth) { 
+                heroPicSlider.style.transform = `translateX(-${heroPicSlideWidth * heroPicCounter}px)`;
+            }
+        }
+
+        function slideHeroPicNext() {
+            heroPicCounter++;
+            if (heroPicCounter >= totalHeroPicSlides) {
+                heroPicCounter = 0; 
+            }
+            updateHeroPicSlider();
+        }
+
+        function slideHeroPicPrev() {
+            heroPicCounter--;
+            if (heroPicCounter < 0) {
+                heroPicCounter = totalHeroPicSlides - 1; 
+            }
+            updateHeroPicSlider();
+        }
+
+        let heroPicAutoSlide; 
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const container = document.querySelector('.hero-pic-slider-container');
+            if (container) {
+                heroPicSlideWidth = container.offsetWidth;
+            }
+            totalHeroPicSlides = heroPicSlider.children.length;
+
+            heroPicAutoSlide = setInterval(slideHeroPicNext, 4000); 
+
+            prevButton.addEventListener('click', () => {
+                clearInterval(heroPicAutoSlide); 
+                slideHeroPicPrev();
+                heroPicAutoSlide = setInterval(slideHeroPicNext, 4000); 
+            });
+
+            nextButton.addEventListener('click', () => {
+                clearInterval(heroPicAutoSlide); 
+                slideHeroPicNext();
+                heroPicAutoSlide = setInterval(slideHeroPicNext, 4000); 
+            });
+        });
+    </script>
+
+
+    <div class="section1">
+        <h1>商品詳情</h1>
+        <div class="box">
+            <div class="pic">
+                <img src="img/foxcup.png">
+            </div>
+            <div class="txt">
+                <p>🦊 日本北狐馬克杯｜讓可愛守護你的每一天！</p>
+                
+                <p>來自北海道的療癒代表──北狐（Ezo red fox），化身成溫暖陪伴你的馬克杯！這款馬克杯採用日本設計風格，融合簡約與動物系可愛元素，讓你無論在辦公室還是家中，喝茶、喝咖啡都充滿幸福感。   
+                </p>
+                
+                <p class="much"> NT$100</p>
+                
+
+                
+            </div>
+            <div class="car">
+                <img src="img/shopcar.png" alt="">
+            </div>
+        </div>
+    </div>
+
+      <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>關於我們</h3>
+                <p>動物旅行帶你探索日本各地最獨特的動物天堂，從北狐到梅花鹿，與大自然中的可愛朋友們親密接觸。</p>
+            </div>
+            <div class="footer-section links">
+                <h3>快速連結</h3>
+                <ul>
+                    <li><a href="#">首頁</a></li>
+                    <li><a href="#">行程介紹</a></li>
+                    <li><a href="#">動物介紹</a></li>
+                    <li><a href="#">最新消息</a></li>
+                    <li><a href="#">聯絡我們</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>聯絡我們</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 台灣桃園市觀音區</p>
+                <p><i class="fas fa-phone"></i> +886-XXX-XXXXXX</p>
+                <p><i class="fas fa-envelope"></i> info@animaltravel.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 動物旅行. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

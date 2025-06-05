@@ -1,0 +1,241 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Noto Sans TC", sans-serif;
+            line-height: 1.6;
+            background-color: #FFFDF6;
+        }
+        
+            .hero {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-color: #fefefe; 
+            z-index: 0;
+        }
+
+        /* 導覽列 */
+        nav {
+        position: fixed;
+        margin-top: 30px;
+        /* margin-right: 200px; */
+        top: 30px;
+        right: 40px;
+        display: flex;
+        gap: 60px;
+        /* background: rgba(255, 255, 255, 0.8); */
+        padding: 10px 20px;
+        border-radius: 20px;
+        z-index: 12;
+        }
+        nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 1.6rem;
+        }
+        nav a:hover {
+            color: #007BFF;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-color: #fefefe; 
+            z-index: 0;
+            }
+
+            .hero h1 {
+            position: relative;
+            z-index: 1;
+            font-size: 3rem;
+            color: #000000;
+            padding: 200px 400px 0; 
+            margin-bottom: 50px;
+            }
+
+            .hero .box{
+                position: relative;
+                display: flex;
+                width: 1200px;
+                height: 600px;
+                /* background-color: #faa; */
+                margin: 0 auto;
+                gap: 30px;
+                 align-items: center;
+            }
+
+            .hero .box .pic img {
+            max-width: 589px;   
+            max-height: 589px;  
+            object-fit: contain; 
+            display: block;    
+        }
+
+            .hero .box .txt p{
+                display: flex;
+                font-size: 1.6rem;
+                line-height: 50px;
+                font-weight: bold;
+                }
+            
+            .section1{
+                width: 100%;
+                height: 1600px;
+                background-color: #FAF6E9;
+                padding-top: 200px;
+            }
+
+            .section1 .box2{
+                width: 1200px;
+                height: 800px;
+                background-color: #FFFCD7;
+                margin: auto;
+                border-radius: 20px;
+                box-sizing: border-box;
+                border: 10px solid #E6A378;
+            
+            }
+
+
+            .section1 .txt1 h1{
+            text-align: center;
+            margin: 50px 0;
+            text-shadow:  1px 1px 0 #E6A378,
+            -1px 1px 0 #E6A378,
+            1px -1px 0 #E6A378,
+            -1px -1px 0 #E6A378;;
+            }
+
+            .section1 .txt1 h3{
+                margin: 50px 20px;
+                font-size: 1.6rem;
+                
+            }
+
+            .section1 .txt1 p{
+                margin-left: 20px;
+                font-size: 1.5rem;
+            }
+
+            .hero .navbg{
+            position: fixed;
+            right: 0;
+            top: 40px;
+            z-index: 11;
+            }
+
+
+             /* --- Footer Styles --- */
+.main-footer {
+    background-color: #333; 
+    color: #f4f4f4; 
+    padding: 60px 20px 20px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.main-footer .footer-content {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding-bottom: 30px;
+}
+
+.main-footer .footer-section {
+    flex: 1;
+    min-width: 250px; 
+    margin: 20px;
+}
+
+.main-footer .footer-section h3 {
+    color: #FFD700;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.main-footer .footer-section p,
+.main-footer .footer-section ul {
+    text-align: left;
+}
+
+.main-footer .footer-section ul {
+    list-style: none; 
+    padding: 0;
+}
+
+.main-footer .footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.main-footer .footer-section ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-footer .footer-section ul li a:hover {
+    color: #007BFF; 
+}
+
+.main-footer .footer-section.contact p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.main-footer .footer-section.contact i {
+    margin-right: 10px;
+    color: #FFD700; 
+}
+
+.main-footer .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    color: #aaa;
+    font-size: 0.9rem;
+}
+.hero .txtbg2{
+    position: absolute;
+    top: 170px;
+}
+.hero .logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 13;
+}
+
+
+ .hero .navbg img{
+        width: 800px;
+        height: 100px;
+    }
+
+    .hero .logo img{
+        width: 200px;
+        height: 200px;
+    }

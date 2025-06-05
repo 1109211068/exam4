@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Hero Section (首頁大圖區) */
+        .hero {
+            position: relative;
+            width: 100%;
+            min-height: calc(100vw * 0.58020833);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-color: #fefefe; 
+            z-index: 0;
+        }
+
+        /* 導覽列 */
+        nav {
+        position: fixed;
+        margin-top: 30px;
+        margin-right: 200px;
+        top: 30px;
+        right: -80px;
+        display: flex;
+        gap: 80px;
+        /* background: rgba(255, 255, 255, 0.8); */
+        padding: 10px 20px;
+        border-radius: 20px;
+        z-index: 12;
+        }
+            nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 2rem;
+        }
+        nav a:hover {
+            color: #007BFF;
+        }
+
+        .hero-content-overlay {
+            font-size: 2.5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: 60px;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            color: rgb(0, 0, 0);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+      
+        .separator-line {
+            width: 1200px; 
+            height: 40px; 
+            background-color: #E9DFA5; 
+            margin: 15px auto; 
+            border-radius: 5px; 
+        }
+        
+
+        .image-slider-container {
+            position: relative; 
+            width: 80%;
+            height: 200px; 
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 6;
+            margin-bottom: 20px; 
+        }
+
+        .image-slider {
+            display: flex;
+            width: calc(100% * 3);
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .image-slider .slide {
+            flex: 1;
+            min-width: 100%; 
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+        }
+
+        .image-slider .slide:nth-child(1) {
+            background-image: url('img/slider1.jpg');
+        }
+        .image-slider .slide:nth-child(2) {
+            background-image: url('img/slider2.jpg');
+        }
+        .image-slider .slide:nth-child(3) {
+            background-image: url('img/slider3.jpg');
+        }
+
+
+        .hero-pic-slider-container {
+            width: 1200px; 
+            height: 500px; 
+            overflow: hidden; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            position: relative; 
+            margin-bottom: 20px; 
+        }
+
+        .hero-pic-slider {
+            display: flex;
+            height: 100%;
+            transition: transform 0.8s ease-in-out; 
+        }
+
+        .hero-pic-slider .slide-item {
+            flex: 1;
+            min-width: 100%; 
+            height: 100%;
+            object-fit: cover; 
+        }
+
+
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5); 
+            color: white;
+            border: none;
+            padding: 15px 10px;
+            cursor: pointer;
+            font-size: 2rem;
+            z-index: 7; 
+            border-radius: 5px; 
+            opacity: 0.7; 
+            transition: opacity 0.3s ease; 
+        }
+
+        .slider-button:hover {
+            opacity: 1; 
+        }
+
+        .slider-button.prev {
+            left: 10px; 
+        }
+
+        .slider-button.next {
+            right: 10px; 
+        }
+
+        /* New Section Styles */
+        
+
+        
+
+        .separator-line2 {
+    width: 100%; 
+    height: 10px;
+    background-color: black; 
+    margin: 15px auto;
+    border-radius: 5px; 
+}
+
+.hero .navbg{
+    position: fixed;
+    right: 0;
+    top: 30px;
+    z-index: 11;
+}
+
+.section1 {
+    position: relative;
+    background-color: #FFFDF6;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.section1 .box{
+                position: relative;
+                display: flex;
+                width: 1600px;
+                height: 600px;
+                /* background-color: #faa; */
+                margin: 80px auto;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .section1 .box .pic img {
+            max-width: 400px;  
+            max-height: 400px;  
+            object-fit: contain; 
+            display: block;   
+            
+        }
+
+          
+
+                .section1 h1{
+                    font-size: 3rem;
+                    text-align: center;
+                }
+
+             
+
+                .cart{
+                    position: absolute;
+                    top: 200px;
+                    width: 100%;
+                    height: 800px;
+                    /* background-color: #fa0; */
+                }
+                .cart .box3{
+                    margin: 0 auto;
+                    width: 1200px;
+                    /* background-color: #faa; */
+                    height: 700px;
+                }
+
+                .cart .box3 h1{
+                    font-size: 3rem;
+                    margin-top: 80px;
+                }
+
+                .cart .underline{
+                    border-bottom: 2px solid black; 
+                    width: 1200px; 
+                     display: inline-block;
+                    padding-bottom: 3px;    
+                    }
+
+                 .section1 .underline{
+                    border-bottom: 2px solid black;
+                    width: 1600px; 
+                     display: inline-block;
+                    padding-bottom: 3px;   
+                    }
+.hero .logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 13;
+}
+
+                
+
+
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="logo">
+        <img src="img/mainlogo.png" alt="">
+    </div>
+        <img class="hero-bg" src="img/page5.png" alt="動物背景" />
+        <nav>
+             <a href="index.html">首頁</a>
+            <a href="about.html">動物旅便帖</a>
+    <a href="newevent.html">季節活動</a>
+    <a href="store.html">動物伴手禮</a>
+    <a href="contant.html">關於本站</a>
+        </nav>
+
+
+        <div class="navbg">
+        <img src="img/navbg.png" alt="">
+    </div>
+
+        <div class="cart">
+            <div class="box3">
+            <h1 ><span class="underline">購物車</span></h1>
+            </div>
+
+        </div>
+    </header>
+
+
+    <div class="section1">
+        <h1><span class="underline">其他熱門商品</span></h1>
+        <div class="box">
+            <div class="pic">
+                <img src="img/foxcup.png">
+            </div>
+            <div class="pic">
+                <img src="img/foxcup.png">
+            </div>
+            <div class="pic">
+                <img src="img/foxcup.png">
+            </div>
+            <div class="pic">
+                <img src="img/foxcup.png">
+            </div>
+ 
+        </div>
+    </div>
+</body>
+</html>

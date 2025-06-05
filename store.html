@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="store.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <div class="logo">
+         <a href="index.html"><img src="img/mainlogo.png" alt=""></a>
+    </div>
+        <img class="hero-bg" src="img/page5.png" alt="動物背景" />
+        <nav>
+
+            <a href="about.html">動物旅便帖</a>
+    <a href="newevent.html">季節活動</a>
+    <a href="store.html">動物伴手禮</a>
+    <a href="contant.html">關於本站</a>
+        </nav>
+
+        <div class="hero-content-overlay">
+            <h2 class="overlay-title">便帖商店</h2>
+            <div class="separator-line"></div>
+            
+            <div class="hero-pic-slider-container">
+                <div class="hero-pic-slider">
+                    <img class="slide-item" src="img/shop03.png" alt="便帖商店圖片1">
+                    <img class="slide-item" src="img/shop05.png" alt="便帖商店圖片2">
+                    <img class="slide-item" src="img/shop06.png" alt="便帖商店圖片3">
+                    <img class="slide-item" src="img/shop07.png" alt="便帖商店圖片4">
+                </div>
+                <button class="slider-button prev" aria-label="上一張圖片">&#10094;</button>
+                <button class="slider-button next" aria-label="下一張圖片">&#10095;</button>
+                <div class="image-slider-container">
+                <div class="image-slider">
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                </div>
+            </div>
+            </div>
+
+            
+        </div>
+
+        <div class="navbg">
+        <img src="img/navbg.png" alt="">
+    </div>
+    </header>
+
+    <section class="grid-section">
+        <h2>商品內容</h2>
+        
+        <div class="grid-container">
+            <a href="store1.html">
+            <div class="grid-item">
+                <img src="img/foxcup.png" alt="圖片1">
+                <h3>北狐馬克杯</h3>
+                <div class="separator-line2"></div>
+                <p>NT$100</p>
+            </div>
+            </a>
+            <div class="grid-item">
+                <img src="img/cats.png" alt="圖片2">
+                <h3>貓島貼紙</h3>
+                <div class="separator-line2"></div>
+                <p>NT$100</p>
+            </div>
+            <div class="grid-item">
+                <img src="img/deers.png" alt="圖片3">
+                <h3>奈良梅花鹿貼紙</h3>
+                <div class="separator-line2"></div>
+                <p>NT$100</p>
+            </div>
+            <div class="grid-item">
+                <img src="img/pans.png" alt="圖片4">
+                <h3>宮城企鵝相框</h3>
+                <div class="separator-line2"></div>
+                <p>NT$100</p>
+            </div>
+            <div class="grid-item">
+                <img src="img/catsi.png" alt="圖片5">
+                <h3>貓島行事曆</h3>
+                <div class="separator-line2"></div>
+                <p>NT$100</p>
+            </div>
+            <div class="grid-item">
+                <img src="img/deerbundle.png" alt="圖片6">
+                <h3>奈良梅花鹿套組</h3>
+                <div class="separator-line2"></div>
+                <p>NT$100</p>
+            </div>
+            <div class="grid-item">
+                <img src="img/animals.png" alt="圖片7">
+                <h3>動物特別御守</h3>
+                <div class="separator-line2"></div>
+                <p>NT$100</p>
+            </div>
+            <div class="grid-item">
+                <img src="img/civet cat.png" alt="圖片8">
+                <h3>狸貓小吊飾</h3>
+                <div class="separator-line2"></div>
+                <p>NT$100</p>
+            </div>
+            <div class="grid-item">
+                <img src="img/foxs.png" alt="圖片9">
+                <h3>狐狸小吊飾</h3>
+                <div class="separator-line2"></div>
+                <p>NT$100</p>
+            </div>
+            <div class="grid-item">
+                <img src="img/catisland.png" alt="圖片10">
+                <h3>貓島明信片</h3>
+                <div class="separator-line2"></div>
+                <p>NT$100</p>
+            </div>
+            <div class="grid-item">
+                <img src="img/catss.png" alt="圖片11">
+                <h3>貓島可愛吊飾</h3>
+                <div class="separator-line2"></div>
+                <p>NT$100</p>
+            </div>
+            <div class="grid-item">
+                <img src="img/deerss.png" alt="圖片12">
+                <h3>奈良公園名信片</h3>
+                <div class="separator-line2"></div>
+                <p>NT$100</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // 活動快訊圖片輪播 (保持不變)
+        const slider = document.querySelector('.image-slider');
+        let counter = 0;
+        // 在腳本執行時，確保 .image-slider-container 已經渲染且有正確的寬度
+        const slideWidth = document.querySelector('.image-slider-container').offsetWidth;
+
+        function slideNext() {
+            counter++;
+            if (counter >= slider.children.length) {
+                counter = 0;
+            }
+            slider.style.transform = `translateX(-${slideWidth * counter}px)`;
+        }
+        // 確保 DOM 元素加載完成後再設置 setInterval
+        document.addEventListener('DOMContentLoaded', () => {
+            setInterval(slideNext, 6000); 
+        });
+
+        // 便帖商店圖片輪播 (新增箭頭控制與調整自動輪播)
+        const heroPicSlider = document.querySelector('.hero-pic-slider');
+        const prevButton = document.querySelector('.hero-pic-slider-container .prev');
+        const nextButton = document.querySelector('.hero-pic-slider-container .next');
+        let heroPicCounter = 0;
+        let heroPicSlideWidth; // 定義但不初始化，待 DOM 加載後獲取
+        let totalHeroPicSlides;
+
+        function updateHeroPicSlider() {
+            if (heroPicSlider && heroPicSlideWidth) { // 確保元素和寬度已獲取
+                heroPicSlider.style.transform = `translateX(-${heroPicSlideWidth * heroPicCounter}px)`;
+            }
+        }
+
+        function slideHeroPicNext() {
+            heroPicCounter++;
+            if (heroPicCounter >= totalHeroPicSlides) {
+                heroPicCounter = 0; 
+            }
+            updateHeroPicSlider();
+        }
+
+        function slideHeroPicPrev() {
+            heroPicCounter--;
+            if (heroPicCounter < 0) {
+                heroPicCounter = totalHeroPicSlides - 1; 
+            }
+            updateHeroPicSlider();
+        }
+
+        // 自動輪播的計時器變量
+        let heroPicAutoSlide; 
+
+        // 在 DOMContentLoaded 事件中初始化和啟動輪播
+        document.addEventListener('DOMContentLoaded', () => {
+            // 獲取 .hero-pic-slider-container 的寬度
+            const container = document.querySelector('.hero-pic-slider-container');
+            if (container) {
+                heroPicSlideWidth = container.offsetWidth;
+            }
+            totalHeroPicSlides = heroPicSlider.children.length;
+
+            heroPicAutoSlide = setInterval(slideHeroPicNext, 4000); 
+
+            prevButton.addEventListener('click', () => {
+                clearInterval(heroPicAutoSlide); 
+                slideHeroPicPrev();
+                heroPicAutoSlide = setInterval(slideHeroPicNext, 4000); 
+            });
+
+            nextButton.addEventListener('click', () => {
+                clearInterval(heroPicAutoSlide); 
+                slideHeroPicNext();
+                heroPicAutoSlide = setInterval(slideHeroPicNext, 4000); 
+            });
+        });
+    </script>
+
+      <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>關於我們</h3>
+                <p>動物旅行帶你探索日本各地最獨特的動物天堂，從北狐到梅花鹿，與大自然中的可愛朋友們親密接觸。</p>
+            </div>
+            <div class="footer-section links">
+                <h3>快速連結</h3>
+                <ul>
+                    <li><a href="#">首頁</a></li>
+                    <li><a href="#">行程介紹</a></li>
+                    <li><a href="#">動物介紹</a></li>
+                    <li><a href="#">最新消息</a></li>
+                    <li><a href="#">聯絡我們</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>聯絡我們</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 台灣桃園市觀音區</p>
+                <p><i class="fas fa-phone"></i> +886-XXX-XXXXXX</p>
+                <p><i class="fas fa-envelope"></i> info@animaltravel.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 動物旅行. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
