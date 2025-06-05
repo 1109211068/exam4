@@ -4,6 +4,13 @@
             box-sizing: border-box;
         }
 
+        @font-face {
+        font-family: 'cat'; /* 給這個字體一個你喜歡的名稱 */
+        src: url('../fonts/MaokenAssortedSans-TC.otf') format('truetype'); /* 字體檔案的路徑和格式 */
+        font-weight: normal; /* 定義這個字體的字重 */
+        font-style: normal; /* 定義這個字體的樣式 */
+    }
+
         body {
             font-family: "Noto Sans TC", sans-serif;
             line-height: 1.6;
@@ -242,7 +249,6 @@
 
 .animal-text-right {
             font-size: 1rem;
-            font-weight: bold;
             max-width: 500px;
             padding: 30px 0;
             margin-left: 100px;
